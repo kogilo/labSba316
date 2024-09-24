@@ -20,10 +20,20 @@
     <ul id="task-list"></ul>
 
     <!-- Weather Section -->
-    <section id="weather">
+    <form class="weatherForm">
         <h2>Weather Information</h2>
         <p id="weather-info">Weather data will be displayed here.</p>
-    </section>
+        <input type="text" class="cityInput" placeholder="Enter city">
+        <button type="submit">Get Weather</button>
+    </form>
+    <div class="card" style="display: none;">
+        <!-- <h1 class="cityDisplay">Twin Cities</h1>
+        <p class="tempDisplay">67F</p>
+        <p class="humidityDisplay">Humidity: 89%</p>
+        <p class="descDisplay">Blue skies</p>
+        <p class="weatherEmoji">☀</p>
+        <p class="errorDisplay">Please enter a city</p> -->
+    </div>
 
     <script src="./src/scripts.js"></script>
 </body>
