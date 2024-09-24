@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Weather</title>
+    <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+
+    <h1>Dynamic To-Do List with Weather Integration</h1>
+
+    <!-- Task Input Form -->
+    <form id="task-form">
+        <input type="text" id="task-input" placeholder="Enter a task" required minlength="3">
+        <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Task List -->
+    <ul id="task-list"></ul>
+
+    <!-- Weather Section -->
+    <section id="weather">
+        <h2>Weather Information</h2>
+        <p id="weather-info">Weather data will be displayed here.</p>
+    </section>
+
+    <script src="./src/scripts.js"></script>
+</body>
+</html>
