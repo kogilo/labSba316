@@ -2,6 +2,9 @@
 const itemForm = document.getElementById("item-form");
 const itemInput = document.getElementById("item-input");
 const itemList = document.getElementById("item-list");
+const clearBtn = document.getElementById("clear");
+const itemFilter = document.getElementById("filter");
+
 
 
 function addItem(e) {
@@ -20,7 +23,10 @@ function addItem(e) {
     const button = createButton("remove-item btn-link text-red");
     li.appendChild(button);
 
+    // Add li to the DOM
     itemList.appendChild(li);
+
+    checkUI();
 
     itemInput.value = "";
 
@@ -40,8 +46,64 @@ function createIcon(classes){
     return icon;
 }
 
+
+function removeItem(e) {
+    if(e.target.parentElement.classList.contains('remove-item')){
+        if (confirm("Are you sure you want to clear an item?")) {
+            e.target.parentElement.parentElement.remove();
+
+            checkUI();
+        }
+        
+    }
+}
+
+function clearItems() {
+    while (itemList.firstChild) {
+        itemList.removeChild(itemList.firstChild);
+    }
+
+    checkUI();
+}
+
+function FilterItems(e) {
+    const items = itemList.querySelectorAll("li"); //copied from below
+    const text = e.target.value.toLowerCase();
+    
+    items.forEach(item => {
+       const itemName = item.firstChild.textContent.toLowerCase(); 
+       if (itemName.indexOf(text) != -1){
+            item.style.display = "flex";
+
+       } else {
+             item.style.display = "none";
+       }
+    });
+}
+
+function checkUI(){
+    const items = itemList.querySelectorAll("li");
+    if (items.length === 0){ //No item
+        clearBtn.style.display = "none";
+        itemFilter.style.display = "none";
+    } else {
+        clearBtn.style.display = "block";
+        itemFilter.style.display = "block";
+    }
+}
+
 // Event Listeners
 itemForm.addEventListener("submit", addItem);
+itemList.addEventListener("click", removeItem);
+clearBtn.addEventListener("click", clearItems);
+itemFilter.addEventListener("input", FilterItems);
+
+checkUI()
+
+
+
+
+////////////////
 
 // Weather Display
 
@@ -98,6 +160,7 @@ function displayWeatherInfo(data){
         humidityDisplay.textContent = `Humidity: ${humidity}%`;
         descDisplay.textContent = description;
         weatherEmoji.textContent = getWeatherEmoji(id);
+        
 
         cityDisplay.classList.add("cityDisplay");
         tempDisplay.classList.add("tempDisplay");
