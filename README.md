@@ -12,7 +12,8 @@ This repository is about the Document Object Model (DOM) and practical implement
 3. [Objectives](#Objectives)
 4. [Instructions](#Instructions)
 5. [Resources for free content](#Resources-for-free-content)
-6. [Reflection (Optional)](#Reflection-(Optional))
+6. [Final Project UI](#Final-Project-UI)
+7. [Reflection (Optional)](#Reflection-(Optional))
 
 ## Project Overview
 
@@ -67,6 +68,10 @@ This project demonstrates JavaScript DOM manipulation techniques, HTML and CSS
 - Commit frequently to the git repository.
 - Include a README file that contains a description of your application.
 - Level of effort displayed in creativity, presentation, and user experience.
+
+## Final Project UI
+
+![Final Project UI](./src/images/projectUI.PNG)
 
 
 ## Reflection (Optional)
