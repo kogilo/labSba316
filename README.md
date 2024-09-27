@@ -14,6 +14,7 @@ This repository is about the Document Object Model (DOM) and practical implement
 5. [Resources for free content](#Resources-for-free-content)
 6. [Final Project UI](#Final-Project-UI)
 7. [Reflection (Optional)](#Reflection-(Optional))
+8. [Project Deployed](#ProjectDeployed)
 
 ## Project Overview
 
@@ -72,6 +73,12 @@ This project demonstrates JavaScript DOM manipulation techniques, HTML and CSS
 ## Final Project UI
 
 ![Final Project UI](./src/images/projectUI.PNG)
+
+
+## 8. Project Deployed
+
+- This project is deployed on netlify.
+- [Click here to visit](https://shoppingweatherapp.netlify.app/)
 
 
 ## Reflection (Optional)
